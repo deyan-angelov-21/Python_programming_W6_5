@@ -14,14 +14,13 @@ def analyseValues(Content: str) -> str:
         if Number > Greatest:
             Greatest = Number
     Average = Total / Count
-    Results = f"{Count};{Total};{Greatest};{Average:.2f}"
+    Results = f"Count;Sum;Greatest;Average\n{Count};{Total};{Greatest};{Average:.2f}\n"
     return Results
 
 def showResults(Filename: str, Results: str) -> None:
     print("#### Number analysis - START ####")
     print(f'File "{Filename}" results:')
-    print("Count;Sum;Greatest;Average")
-    print(Results)
+    print(Results, end="")
     print("#### Number analysis - END ####")
 
 def main() -> None:
