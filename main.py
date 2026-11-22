@@ -1,9 +1,9 @@
-def readNumbers(Filename: str) -> str:
+def readValues(Filename: str) -> str:
     with open(Filename, "r", encoding="UTF-8") as file:
         Content = file.read()
     return Content
 
-def analyzeNumbers(Content: str) -> str:
+def analyseValues(Content: str) -> str:
     Count = 0
     Total = 0
     Greatest = 0
@@ -27,8 +27,8 @@ def showResults(Filename: str, Results: str) -> None:
 def main() -> None:
     print("Program starting.")
     Filename = input("Insert filename: ")
-    Content = readNumbers(Filename)
-    Results = analyzeNumbers(Content)
+    Content = readValues(Filename)
+    Results = analyseValues(Content)
     showResults(Filename, Results)
     print("Program ending.")
     return None
